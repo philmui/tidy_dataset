@@ -26,7 +26,7 @@
 # project set: setting current working directories & project variables
 #
 
-projectdir="/Users/philmui/Dropbox/learn/coursera/03.data.clean/project"
+projectdir="/Users/philmui/tidy_dataset"
 destdir=paste0(projectdir, "/Combined Dataset")
 outputfilename="combined_mean_std.txt"
 
