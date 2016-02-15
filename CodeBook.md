@@ -51,6 +51,14 @@ For each of these 33 measures, we have 17 variables that were estimated from the
 
 Multiplying the 33 measures each of which has 17 variables: we have 33 x 17 = 561 measurements total -- which is the total number of columns in the training & testing datasets.
 
+Extracting out only those columns which are either "mean()" or "std()" metrics, we have 33 * 2 = 66 final columns in the output.  We then append (cbind) 2 additional columns:
+
+1. Name of Activity
+2. Number of the subject (a number from 1-30)
+
+That brings our final output to be a matrix with 68 columns.
+
+
 Activities & Subjects
 ----------------------
 The measurements are taken from 6 distinct activites for 30 different subjects:
@@ -64,7 +72,7 @@ The measurements are taken from 6 distinct activites for 30 different subjects:
 
 Generating the Summary
 -----------------------
-After combining the "train" and "test" datasets, this script "runAnalysis.R" aggregates measurements for the same *subject* (which ranges from 1-30) and the same *activity* (there are 6 distinct activities) for a total of 180 aggregate values (180 rows) in the final summary table (dimension: 180 rows x 561 cols)
+After combining the "train" and "test" datasets, this script "runAnalysis.R" aggregates measurements for the same *subject* (which ranges from 1-30) and the same *activity* (there are 6 distinct activities) for a total of 180 aggregate values (180 rows) in the final summary table (dimension: 180 rows x 68 cols)
 
 The script [runAnalysis.R] (https://github.com/philmui/tidy_dataset/blob/master/runAnalysis.R) calculates average values of measurements for each subject for each activity.
 
